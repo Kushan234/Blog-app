@@ -79,7 +79,7 @@ const ArticleDetails = () => {
         Conduct testing of the initial UI components to ensure smooth functionality.
 </p>
             </div>
-            <CommentsContainer className="mt-10"/>
+            <CommentsContainer className="mt-10" logginedUserId="a"/>
           </article>
           <SuggestedPost header="Latest Article" posts={postData} tags={tagsData} className="mt-8 lg:mt-0 lg:max-w-xs"/>
         </section>

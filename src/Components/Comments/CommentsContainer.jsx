@@ -4,7 +4,7 @@ import { getCommentsData } from '../../data/comment'
 import Comment from './Comment';
 
 
-const CommentsContainer = ({className}) => {
+const CommentsContainer = ({className, logginedUserId}) => {
 
     const [comments, setComments] = useState([]);
     const mainComments = comments.filter((Comment) =>Comment.parent === null);
@@ -44,7 +44,8 @@ const CommentsContainer = ({className}) => {
         <div className="mt-8 space-y-4">
           {
             mainComments.map((comment)=>(
-             <Comment />
+             <Comment comment={comment} logginedUserId={logginedUserId}/>
+             
             ))
           }
         </div>
